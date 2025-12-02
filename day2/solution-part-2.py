@@ -9,9 +9,10 @@ for num_range in lines:
     for current in range(int(start), int(end) + 1):
         s = str(current)
 
-        # A composit of a string is always going to include said string
-        # Thus if composit excludes known repeatability (i.e. ends)
-        # Then the tested string in the new string must be a repeated string.
+        # A composit of a base string is always going to include the base string
+        # Thus if the composit excludes known repeatability (i.e. ends)
+        # Then the base string in the new string must be a repeated string.
+        # If base string is not found it mean no repeatability is in the composit
         if s in (s + s)[1:-1]:
             output += current
 
